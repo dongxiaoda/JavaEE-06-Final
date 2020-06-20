@@ -2,6 +2,7 @@ package edu.bjtu.sse.djd.homeworkservice.controller;
 
 import edu.bjtu.sse.djd.homeworkservice.entity.Homework;
 import edu.bjtu.sse.djd.homeworkservice.response.DataResponse;
+import edu.bjtu.sse.djd.homeworkservice.response.Response;
 import edu.bjtu.sse.djd.homeworkservice.service.HomeworkService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -15,6 +16,7 @@ import java.util.List;
  * @date 2020/6/17 16:59
  **/
 
+@CrossOrigin
 @Controller(value = "Homework")
 @RequestMapping(value = "/Homework")
 public class HomeworkController {
@@ -57,9 +59,17 @@ public class HomeworkController {
      * @author 董金达
      * @date 17:07 2020/6/17
      **/
+    @ResponseBody
     @PostMapping(value = "/save")
-    public void saveHomework(@RequestBody Homework homework) {
+    public Response saveHomework(@RequestBody Homework homework) {
         homeworkService.save(homework);
+
+        Response response = new Response();
+
+        response.setCode(0);
+        response.setMsg("Succeed to save a homework");
+
+        return response;
     }
 
     /**

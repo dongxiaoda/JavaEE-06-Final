@@ -21,7 +21,7 @@ public abstract class AbstractService<E, PK> {
      * @author 董金达
      * @date 16:47 2020/6/17
      **/
-    protected abstract AbstractRepository<E, PK> getRepository();
+    public abstract AbstractRepository<E, PK> getRepository();
 
     /**
      * 返回所有记录

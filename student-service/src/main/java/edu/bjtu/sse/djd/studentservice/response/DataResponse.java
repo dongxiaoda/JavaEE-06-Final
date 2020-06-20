@@ -12,7 +12,7 @@ import lombok.EqualsAndHashCode;
 
 @EqualsAndHashCode(callSuper = true)
 @Data
-public class DataResponse<T> extends AbstractResponse {
+public class DataResponse<T> extends Response {
 
     private T data;
 

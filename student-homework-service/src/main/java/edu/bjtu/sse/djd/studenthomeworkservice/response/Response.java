@@ -1,18 +1,16 @@
-package edu.bjtu.sse.djd.homeworkservice.response;
+package edu.bjtu.sse.djd.studenthomeworkservice.response;
 
 import lombok.Data;
 
 /**
- * response 抽象类
- *
  * @author 董金达
  * @version 1.0
  * @name AbstractResponse
- * @date 2020/6/17 16:41
+ * @date 2020/6/17 22:58
  **/
 
 @Data
-public abstract class AbstractResponse {
+public class Response {
 
     private int code;
 

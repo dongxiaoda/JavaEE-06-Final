@@ -2,12 +2,10 @@ package edu.bjtu.sse.djd.studenthomeworkservice.controller;
 
 import edu.bjtu.sse.djd.studenthomeworkservice.entity.StudentHomework;
 import edu.bjtu.sse.djd.studenthomeworkservice.response.DataResponse;
+import edu.bjtu.sse.djd.studenthomeworkservice.response.Response;
 import edu.bjtu.sse.djd.studenthomeworkservice.service.StudentHomeworkService;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -18,7 +16,8 @@ import java.util.List;
  * @date 2020/6/17 22:59
  **/
 
-@Controller(value = "StudentHomeworkController")
+@CrossOrigin
+@Controller
 @RequestMapping(value = "/StudentHomework")
 public class StudentHomeworkController {
 
@@ -60,9 +59,18 @@ public class StudentHomeworkController {
      * @author 董金达
      * @date 23:06 2020/6/17
      **/
-    @GetMapping(value = "/save")
-    public void save(@RequestBody StudentHomework studentHomework) {
+    @ResponseBody
+    @PostMapping(value = "/save")
+    public Response save(@RequestBody StudentHomework studentHomework) {
         studentHomeworkService.save(studentHomework);
+
+        String msg = "Succeed to save student-homework";
+
+        Response response = new Response();
+        response.setCode(0);
+        response.setMsg(msg);
+
+        return response;
     }
 
     /**
@@ -74,7 +82,7 @@ public class StudentHomeworkController {
      * @author 董金达
      * @date 23:08 2020/6/17
      **/
-    @GetMapping(value = "/delete")
+    @PostMapping(value = "/delete")
     public void delete(@RequestBody StudentHomework studentHomework) {
         studentHomeworkService.delete(studentHomework);
     }

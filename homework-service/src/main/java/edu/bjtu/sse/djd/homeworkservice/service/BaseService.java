@@ -13,10 +13,18 @@ import org.springframework.beans.factory.annotation.Autowired;
 public abstract class BaseService<E, PK, R extends AbstractRepository<E, PK>> extends AbstractService<E, PK> {
 
     @Autowired
-    protected R repository;
+    AbstractRepository<E, PK> repository = null;
 
+    /**
+     * 返回 repository
+     *
+     * @param
+     * @return edu.bjtu.sse.djd.homeworkservice.repository.AbstractRepository<E, PK>
+     * @author 董金达
+     * @date 10:20 2020/6/18
+     **/
     @Override
-    protected R getRepository() {
+    public AbstractRepository<E, PK> getRepository() {
         return repository;
     }
 }
