@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>student</title>
+    <script src="../js/homework.js"></script>
+</head>
+<body onload="refreshTable_func()">
+<h2 align="center">学生作业管理系统——学生端</h2>
+<hr color="black">
+<h3 align="center">作业列表</h3>
+<div>
+    <table id="homeworkTable" align="center" width="960" border="1" cellpadding="1" cellspacing="1">
+        <tr align="center" height="50" bgcolor="gray">
+            <td>作业ID</td>
+            <td>作业标题</td>
+            <td>作业内容</td>
+            <td>创建时间</td>
+            <td>更新时间</td>
+        </tr>
+    </table>
+</div>
+<h3 align="center">提交作业</h3>
+<div>
+    <table id="submitTable" width="960" align="center">
+        <tr>
+            <td align="right"><label>作业ID：</label></td>
+            <td align="left"><input id="homeworkId" type="text" name="homeworkId"></td>
+            <td></td>
+            <td align="right"><label>学号：</label></td>
+            <td align="left"><input id="studentId" type="text" name="studentId"></td>
+        </tr>
+        <tr>
+            <td align="right"><label>作业标题：</label></td>
+            <td align="left"><input id="title" type="text" name="title"></td>
+            <td></td>
+            <td align="right"><label>作业内容：</label></td>
+            <td align="left"><input id="content" type="text" name="content"></td>
+        </tr>
+        <tr>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td>
+                <input type="button" onclick="history.back();" value="返回上一页"/>&ensp;
+                <input type="button" onclick="window.location='index.html'" value="返回首页"/>&ensp;
+                <input type="submit" onclick="submitHomework_func()" value="提交作业"/>
+            </td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>student</title>
+    <style>
+        #div4, #div5 {
+            width: 50%;
+            float: left;
+            /*border: black;*/
+            text-align: center;
+        }
+    </style>
+    <script src="../js/homework.js"></script>
+</head>
+<body onload="refreshTable_func()">
+<h2 align="center">学生作业管理系统——教师端</h2>
+<hr color="black">
+<h3 align="center">作业列表</h3>
+<div>
+    <table id="homeworkTable" align="center" width="960" border="1" cellpadding="1" cellspacing="1">
+        <tr align="center" height="50" bgcolor="gray">
+            <td>作业ID</td>
+            <td>作业标题</td>
+            <td>作业内容</td>
+            <td>创建时间</td>
+            <td>更新时间</td>
+        </tr>
+    </table>
+</div>
+<div align="center">
+    <div id="div4">
+        <h3 align="center">添加作业</h3>
+        <div align="center">
+            <table>
+                <tr>
+                    <td align="right">作业标题:&ensp;&ensp;</td>
+                    <td><input id="homeworkTitle_1" type="text" name="title"></td>
+                </tr>
+                <tr>
+                    <td valign="right">作业内容:&ensp;&ensp;</td>
+                    <td><input id="homeworkContent_1" type="text" name="content"></td>
+                </tr>
+                <tr>
+                    <td><br></td>
+                    <td><br></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="button" onclick="history.back();" value="返回上一页">&ensp;
+                        <input type="submit" onclick="addHomework_func()" value="发布作业"/>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div id="div5">
+        <h3 align="center">修改作业</h3>
+        <div align="center">
+            <table>
+                <tr>
+                    <td align="right">作业ID:&ensp;&ensp;</td>
+                    <td><input type="text" name="homeworkId" id="homeworkId"></td>
+                </tr>
+                <tr>
+                    <td align="right">作业标题:&ensp;&ensp;</td>
+                    <td><input type="text" name="title" id="homeworkTitle_2"></td>
+                </tr>
+                <tr>
+                    <td valign="right">作业内容:&ensp;&ensp;</td>
+                    <td><input type="text" name="content" id="homeworkContent_2"></td>
+                </tr>
+                <tr>
+                    <td><br></td>
+                    <td><br></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="button" name="Submit" onclick="history.back();" value="返回上一页">&nbsp;
+                        <input type="button" onclick="updateHomework_func()" value="修改作业"/>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <button onclick="history.back();" value="返回上一页"></button>&ensp;
+    <button onclick="window.location='index.html'" type="button">返回首页</button>&ensp;
+    <button onclick="window.location='studentHomework.html'" type="button">查看作业提交列表</button>&ensp;
+    <button onclick="window.location='student.html'" type="button">查看学生列表</button>&ensp;
+</div>
+
+</body>
+</html>

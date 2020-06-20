@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>teacher</title>
+    <style>
+        #div2, #div3 {
+            width: 50%;
+            float: left;
+            /*border: black;*/
+            text-align: center;
+        }
+    </style>
+    <script src="../js/student.js"></script>
+</head>
+<body onload="refreshTable_func()">
+<h2 align="center">学生作业管理系统——教师端</h2>
+<hr color="black">
+<h3 align="center">学生列表</h3>
+<div align="center">
+    <div>
+        <table id="studentTable" align="center" width=70% border="1" cellpadding="1" cellspacing="1">
+            <tr align="center" height="50" bgcolor="gray">
+                <td>学生ID</td>
+                <td>学生姓名</td>
+                <td>密码</td>
+                <td>创建时间</td>
+                <td>更新时间</td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <div id="div2">
+            <h3>添加学生信息</h3>
+            <table align="center">
+                <tr>
+                    <!--                        <td align="right">学生ID:&ensp;&ensp;</td>-->
+                    <!--                        <td><input type="text" id="studentId_1"></td>-->
+                    <td><br></td>
+                    <td><br></td>
+                </tr>
+                <tr>
+                    <td align="right">学生姓名:&ensp;&ensp;</td>
+                    <td><input type="text" id="studentName_1"></td>
+                </tr>
+                <tr>
+                    <td align="right">密码:&ensp;&ensp;</td>
+                    <td><input type="password" id="password_1"></td>
+                </tr>
+                <tr>
+                    <td><br></td>
+                    <td><br></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit" onclick="addStudent_func()" value="添加学生信息"/>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="div3">
+            <h3>更新学生信息</h3>
+            <table align="center">
+                <tr>
+                    <td align="right">学生ID:&ensp;&ensp;</td>
+                    <td><input type="text" id="studentId_2"></td>
+                </tr>
+                <tr>
+                    <td align="right">学生姓名:&ensp;&ensp;</td>
+                    <td><input type="text" id="studentName_2"></td>
+                </tr>
+                <tr>
+                    <td align="right">密码:&ensp;&ensp;</td>
+                    <td><input type="password" id="password_2"></td>
+                </tr>
+                <tr>
+                    <td><br></td>
+                    <td><br></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit" onclick="updateStudent_func()" value="更新学生信息"/>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <input type="button" name="Submit" onclick="history.back();" value="返回上一页">&ensp;
+    <button onclick="window.location='index.html'" type="button">返回首页</button>&ensp;
+    <button onclick="location.href='studentHomework.html'" type="button">查看作业提交列表</button>&ensp;
+    <button onclick="location.href='homework-teacher.html'" type="button">查看作业发布列表</button>&ensp;
+</div>
+</body>
+</html>

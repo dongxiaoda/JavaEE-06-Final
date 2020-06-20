@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JavaEE-06-Final</title>
+    <style>
+        #div1 {
+            height: 100%;
+            width: 50%;
+            /*float: none;*/
+            /*border: black;*/
+            margin: 0 auto;
+            text-align: center;
+        }
+    </style>
+    <script src="../js/index.js"></script>
+</head>
+<body>
+<h2 style="text-align: center">基于 SpringCloud + MySQL 的简易分布式学生作业管理系统</h2>
+<div id="div1" style="text-align: center">
+    <fieldset>
+        <legend style="text-align: left">学生作业管理系统</legend>
+        <div style="text-align: center">
+            <form name="myForm">
+                <table id="homeworkTable">
+                    <tr>
+                        <td>
+                            <label for="userName">用户名</label>
+                        </td>
+                        <td>
+                            <input type="text" id="userName" name="userName">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="password">密码</label>
+                        </td>
+                        <td>
+                            <input type="password" id="password" name="password">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="radio" id="teacher" name="identity" value="teacher">
+                            <label for="teacher">教师</label>
+                        </td>
+                        <td>
+                            <input type="radio" id="student" name="identity" value="teacher">
+                            <label for="teacher">学生</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="button" value="注册" id="register" onclick="register_func()">
+                        </td>
+                        <td>
+                            <input type="button" value="登录" id="login" onclick="login_func()">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </fieldset>
+</div>
+</body>
+</html>
